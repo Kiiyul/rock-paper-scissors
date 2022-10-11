@@ -1,3 +1,6 @@
+let playerScore = 0
+let computerScore = 0
+
 
 //Function for computer selection. 
 function getComputerChoice (){
@@ -34,8 +37,22 @@ function getPlayerChoice(){
    return choiceLower
 }
 
+let playerSelection = getPlayerChoice()
+let computerSelection = getComputerChoice()
 
-const playerSelection = getPlayerChoice()
-const computerSelection = getComputerChoice()
 
 console.log(playRound(playerSelection, computerSelection))
+
+//function for keeping score of winners
+
+function game() {
+    for (let i=0; i<5; i++) {
+        
+    playerSelection = getPlayerChoice()
+    computerSelection = getComputerChoice()
+    
+    console.log(playRound(playerSelection, computerSelection))
+
+    }
+} game()
+
