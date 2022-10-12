@@ -1,7 +1,3 @@
-let playerScore = 0
-let computerScore = 0
-
-
 //Function for computer selection. 
 function getComputerChoice (){
     let choice = ['rock', 'paper', 'scissors']
@@ -10,21 +6,24 @@ function getComputerChoice (){
     return selection;
 }
 
+let playerScore = 0
+let computerScore = 0
+
 //function to find out winner of the round
 
 function playRound(playerSelection, computerSelection){ if (playerSelection === computerSelection){
     return 'It\'s a draw!'
-} else if ( playerSelection === 'rock' & computerSelection === 'scissors') {
+} else if ( playerSelection === 'rock' & computerSelection === 'scissors') { playerScore++;
     return 'You win! Rock beats scissors'
-} else if ( playerSelection === 'rock' & computerSelection === 'paper') {
+} else if ( playerSelection === 'rock' & computerSelection === 'paper') { computerScore++;
     return 'You lose! Paper beats rock'
-} else if (playerSelection === 'paper' & computerSelection === 'rock') {
+} else if (playerSelection === 'paper' & computerSelection === 'rock') { playerScore++;
     return 'You win! Paper beats rock'
-} else if ( playerSelection === 'paper' & computerSelection === 'scissors' ) {
+} else if ( playerSelection === 'paper' & computerSelection === 'scissors' ) { computerScore++
     return 'You lose! Scissors beats Paper'
-} else if ( playerSelection === 'scissors' & computerSelection === 'paper') {
+} else if ( playerSelection === 'scissors' & computerSelection === 'paper') { playerScore++
     return 'You win! Scissors beats Paper'
-} else if ( playerSelection === 'scissors' & computerSelection === 'rock') {
+} else if ( playerSelection === 'scissors' & computerSelection === 'rock') {computerScore++
     return 'You lose! Rock beats Scissors'
 }
 }
@@ -46,12 +45,25 @@ console.log(playRound(playerSelection, computerSelection))
 //function for keeping score of winners
 
 function game() {
-    for (let i=0; i<5; i++) {
-        
+    for (let i=0; i<5; i+0) {
     playerSelection = getPlayerChoice()
     computerSelection = getComputerChoice()
-    
-    console.log(playRound(playerSelection, computerSelection))
+    let result = playRound(playerSelection, computerSelection)
+    console.log(result)
+    if (result.includes('win!')) {
+        i++;
+        if (i===5) {
+            alert(`The final score is ${playerScore} to ${computerScore}`);
+        }
+    } else if (result.includes('lose!')) {
+        i++;
+        if (i===5) {
+            alert(`The final score is ${playerScore} to ${computerScore}`)
+        }
+    } else if (result.includes('draw!')) {
+        i+0
+    }
+
 
     }
 } game()
