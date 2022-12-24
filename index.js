@@ -48,6 +48,9 @@ function game(e) {
         newGame.addEventListener('click', resetScore);
         results.appendChild(para);
         newGame.style.display = 'block';
+        rockButton.disabled = 'true';
+        paperButton.disabled = 'true';
+        scissorsButton.disabled = 'true';
     }
 
 }
@@ -59,6 +62,9 @@ function resetScore() {
     playerScore = 0;
     computerScore = 0;
     newGame.style.display = 'none';
+    rockButton.disabled = !rockButton.disabled;
+    paperButton.disabled = !paperButton.disabled;
+    scissorsButton.disabled = !scissorsButton.disabled;
 }
 
 const container = document.querySelector('#container');
@@ -71,7 +77,7 @@ const pScore = document.createElement('p');
 pScore.classList.add('pScore');
 score.appendChild(pScore);
 
-cScore = document.createElement('p');
+const cScore = document.createElement('p');
 cScore.classList.add('cScore');
 score.appendChild(cScore);
 
