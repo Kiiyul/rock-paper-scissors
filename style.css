@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.score{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.buttonContainer{
+    display: flex;
+    gap: 15px;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pScore{
+    margin: 15px;
+}
+
+.cScore{
+    margin: 15px;
+}
+
+.results{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameResults{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
