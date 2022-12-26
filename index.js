@@ -1,6 +1,6 @@
 //Function for computer selection. 
 function getComputerChoice (){
-    let choice = ['rock', 'paper', 'scissors']
+    let choice = ['Rock', 'Paper', 'Scissors']
     let selection = choice[Math.floor(Math.random()*choice.length)];
     return selection;
 }
@@ -12,17 +12,17 @@ let computerScore = 0
 
 function playRound(playerSelection, computerSelection){ if (playerSelection === computerSelection){
     return 'It\'s a draw!'
-} else if ( playerSelection === 'rock' & computerSelection === 'scissors') { playerScore++;
+} else if ( playerSelection === 'Rock' & computerSelection === 'Scissors') { playerScore++;
     return 'You win! Rock beats scissors'
-} else if ( playerSelection === 'rock' & computerSelection === 'paper') { computerScore++;
+} else if ( playerSelection === 'Rock' & computerSelection === 'Paper') { computerScore++;
     return 'You lose! Paper beats rock'
-} else if (playerSelection === 'paper' & computerSelection === 'rock') { playerScore++;
+} else if (playerSelection === 'Paper' & computerSelection === 'Rock') { playerScore++;
     return 'You win! Paper beats rock'
-} else if ( playerSelection === 'paper' & computerSelection === 'scissors' ) { computerScore++
+} else if ( playerSelection === 'Paper' & computerSelection === 'Scissors' ) { computerScore++
     return 'You lose! Scissors beats Paper'
-} else if ( playerSelection === 'scissors' & computerSelection === 'paper') { playerScore++
+} else if ( playerSelection === 'Scissors' & computerSelection === 'Paper') { playerScore++
     return 'You win! Scissors beats Paper'
-} else if ( playerSelection === 'scissors' & computerSelection === 'rock') {computerScore++
+} else if ( playerSelection === 'Scissors' & computerSelection === 'Rock') {computerScore++
     return 'You lose! Rock beats Scissors'
 }
 }
@@ -37,8 +37,8 @@ function game(e) {
 
     para.textContent = result;
     results.appendChild(para);
-    pScore.textContent = `Player score is ${playerScore}`;
-    cScore.textContent = `Computer score is ${computerScore}`;
+    pScore.textContent = `Player score is: ${playerScore}`;
+    cScore.textContent = `Computer score is: ${computerScore}`;
 
     if (playerScore === 5 || computerScore === 5) {
         para.textContent = `The final score is ${playerScore} to ${computerScore}`;
@@ -87,19 +87,19 @@ container.appendChild(buttonContainer);
 
 const rockButton = document.createElement('button');
 rockButton.classList.add('rockButton');
-rockButton.textContent = 'rock';
+rockButton.textContent = 'Rock';
 buttonContainer.appendChild(rockButton)
 rockButton.addEventListener('click', game)
 
 const paperButton = document.createElement('button');
 paperButton.classList.add('paperButton');
-paperButton.textContent = 'paper';
+paperButton.textContent = 'Paper';
 buttonContainer.appendChild(paperButton);
 paperButton.addEventListener('click', game)
 
 const scissorsButton = document.createElement('button');
 scissorsButton.classList.add('scissorsButton');
-scissorsButton.textContent = 'scissors';
+scissorsButton.textContent = 'Scissors';
 buttonContainer.appendChild(scissorsButton);
 scissorsButton.addEventListener('click', game)
 
