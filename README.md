@@ -1,13 +1,3 @@
-# rock-paper-scissors
-
-function that will select rock, paper or scissors randomly for computer
-
-function that completes the round by taking computer selection and player selection. 
-
-string required which declares the winner
-
-function for player selection should be case-insensitive
-
-game will be completed after 5 rounds
-
-use prompt to get player input
+First real project submitted on The Odin Project.
+I found the JS side of things very difficult but have learnt quite a lot. 
+Would like to keep revisitng this project to continue to improve the CSS.
